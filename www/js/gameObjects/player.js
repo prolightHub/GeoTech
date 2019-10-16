@@ -31,7 +31,7 @@ export default class Player {
             sprite.setAccelerationX(0).setFriction(600, 20);
         }
 
-        if(keys.space.isDown)
+        if(keys.space.isDown && sprite.body.standing)
         {
             sprite.setVelocityY(-jumpHeight);
         }
