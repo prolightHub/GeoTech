@@ -7,7 +7,16 @@ document.addEventListener('deviceready', function()
         parent: 'game',
         width: 800,
         height: 480,
-        scene: MainScene
+        scene: MainScene,
+        backgroundColor: '#36B0C1',
+        physics: {
+            default: "arcade",
+            arcade: {
+                gravity: { 
+                    y: 800 
+                }
+            }
+        }
     };
     
     var game = new Phaser.Game(config);
