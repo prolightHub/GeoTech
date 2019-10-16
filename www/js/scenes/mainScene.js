@@ -1,6 +1,6 @@
-// import Player from "../gameObjects/player.js";
+import Player from "../gameObjects/player.js";
 
-// let player;
+let player;
 
 export default class MainScene extends Phaser.Scene {
 
@@ -18,29 +18,21 @@ export default class MainScene extends Phaser.Scene {
 
     create ()
     {
-        var block = this.impact.add.image(300, 100, "block").setActiveCollision();
-
-        // var block = this.impact.add.sprite(400, 380, "block");
+        var block = this.impact.add.sprite(120, 380, "block");
     
-        // block.setBodyScale(600 / block.width, 50 / block.height);
-        // // block.setImmovable(true);
-        // block.body.allowGravity = false;
+        block.setBodyScale(600 / block.width, 50 / block.height).setGravity(0).setActiveCollision();
 
-        // var waterBeaker = this.impact.add.sprite(200, 330, "waterBeaker");
+        var waterBeaker = this.impact.add.sprite(200, 330, "waterBeaker");
+        waterBeaker.setActiveCollision();
 
-        // player = new Player(400, 200, this);
+        player = new Player(400, 200, this);
 
-        // // this.impact.add.collider(player.sprite, block);
-        // // this.impact.add.collider(waterBeaker, block);
-
-        // // this.impact.add.collider(waterBeaker, player.sprite);
-
-        // window.player = player;
+        window.player = player;
     }
 
     update ()
     {
-        // player.update();
+        player.update();
     }
 
     render ()

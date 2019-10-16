@@ -12,9 +12,7 @@ document.addEventListener('deviceready', function()
         physics: {
             default: 'impact',
             impact: {
-                gravity: { 
-                    // y: 800 
-                }
+                gravity: 600
             }
         }
     };
