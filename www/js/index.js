@@ -10,10 +10,10 @@ document.addEventListener('deviceready', function()
         scene: MainScene,
         backgroundColor: '#36B0C1',
         physics: {
-            default: "arcade",
-            arcade: {
+            default: 'impact',
+            impact: {
                 gravity: { 
-                    y: 800 
+                    // y: 800 
                 }
             }
         }
